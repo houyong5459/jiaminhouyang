@@ -4,53 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wedding Invitation Website</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #fff;
+    }
+    iframe {
+      width: 100%;
+      height: 100vh;
+      border: none;
+    }
+  </style>
 </head>
-<body style="margin:0; background-color:#fff;" onload="startMusic()">
 
-    <!-- 🎵 Background Music -->
-    <audio id="bg-music" autoplay loop>
-      <!-- 
-      <source src="Obvious.mp3" type="audio/mpeg">
-      <source src="周杰倫 - 愛的飛行日記 HQ.mp3" type="audio/mpeg">
-      <source src="周杰倫 Jay Chou園遊會 Fun Fair-Official Music Video.mp3" type="audio/mpeg">
-      -->
-      
-     <source src="Say U Love Me.mp3" type="audio/mpeg">
-      
-    </audio>
+<body onload="startMusic()">
 
-    <script>
-        async function startMusic() {
-            const audio = document.getElementById('bg-music');
-            try {
-                await audio.play();
-                console.log("Autoplay success 🎶");
-            } catch (err) {
-                console.log("Waiting for browser permission...");
-                setTimeout(startMusic, 1000); // retry every second until allowed
-            }
-        }
-        window.addEventListener('load', startMusic);
-    </script>
+  <!-- 🎵 Background Music -->
+  <audio id="bg-music" autoplay loop>
+    <source src="Say U Love Me.mp3" type="audio/mpeg">
+  </audio>
 
+  <script>
+    async function startMusic() {
+      const audio = document.getElementById('bg-music');
+      try {
+        await audio.play();
+        console.log("Autoplay success 🎶");
+      } catch (err) {
+        console.log("Waiting for browser permission...");
+        setTimeout(startMusic, 1000); // retry every second until allowed
+      }
+    }
+    window.addEventListener('load', startMusic);
+  </script>
 
-    <!-- 🌸 Canva Embed -->
-    <div style="position: relative; width: 100%; height: 0; padding-top: 562.2255%;
-  padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
-  border-radius: 8px; will-change: transform;">
-        <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-                src="https://www.canva.com/design/DAG2mvb8GT8/gXMKNEmNhJgGzuXacPKl0A/view?embed"
-                allowfullscreen="allowfullscreen" allow="fullscreen">
-        </iframe>
-    </div>
-
-    <a href="https://www.canva.com/design/DAG2mvb8GT8/gXMKNEmNhJgGzuXacPKl0A/view?utm_content=DAG2mvb8GT8&utm_campaign=designshare&utm_medium=embeds&utm_source=link"
-       target="_blank" rel="noopener">
-        Wedding Invitation Website (HY & JM)
-    </a> by Jiamin0529
+  <!-- 🌸 Canva Embed (animation + mobile responsive preserved) -->
+  <iframe
+    loading="lazy"
+    src="https://www.canva.com/design/DAG2mvb8GT8/gXMKNEmNhJgGzuXacPKl0A/view?embed"
+    allowfullscreen
+    allow="fullscreen">
+  </iframe>
 
 </body>
 </html>
-
-
-
